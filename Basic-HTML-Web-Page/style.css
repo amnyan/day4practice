@@ -1,0 +1,107 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+.topnav {
+    background-color: #887b56;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0; /* Ensure the navbar sticks to the top */
+    width: 100%;
+    z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+.topnav a {
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: background-color 0.3s ease;
+    border-radius: 6px;
+}
+
+.topnav a:hover {
+    background-color: #dac4b3;
+}
+
+.topnav a.active {
+    background-color: #3f4022;
+    color: white;
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input[type="text"] {
+    padding: 6px;
+    font-size: 17px;
+    border: none;
+    border-radius: 7px;
+}
+
+.search-container button {
+    padding: 6px;
+    margin-left: 10px;
+    background: #f1f1f1;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 7px;
+}
+
+.search-container button:hover {
+    background-color: #dac4b3;
+}
+
+/* Main Layout */
+.container {
+    display: flex;
+    height: calc(100vh - 60px); /* Adjust height to account for fixed navbar */
+    padding-top: 40px; /* Adjust top padding to account for fixed navbar height */
+}
+
+.main-content {
+    flex-grow: 1; /* Take up the remaining space */
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 700px; /* Ensure this width fits within the container */
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #887b56;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Optional: Adjust spacing between content */
+.container > * {
+    margin: 0;
+}
+
+footer {
+    background-color: #887b56;
+    padding: 0px;
+    color: white;
+    text-align: center;
+}
